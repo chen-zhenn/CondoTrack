@@ -1,6 +1,5 @@
 const mongoose = require('mongoose')
-const unitSchema = require('./ExpenseSchema')
-const expenseSchema = require('./ExpenseSchema')
+const { ExpenseSchema, UnitSchema } = require('./index')
 
 const BuildingSchema = mongoose.Schema(
   {
@@ -13,11 +12,11 @@ const BuildingSchema = mongoose.Schema(
       required: [true, 'Deve fornecer o endereço do condomínio'],
     },
     units: {
-      type: [unitSchema],
+      type: [UnitSchema],
       required: true,
     },
     expenses: {
-      type: [expenseSchema],
+      type: [ExpenseSchema],
       required: true,
     },
   },

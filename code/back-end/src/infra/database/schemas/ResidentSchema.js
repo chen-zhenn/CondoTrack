@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const { PaymentSchema } = require('./index')
 
 const ResidentSchema = mongoose.Schema(
   {
@@ -19,6 +20,10 @@ const ResidentSchema = mongoose.Schema(
     },
     unitId: {
       type: mongoose.Schema.Types.ObjectId,
+      required: true,
+    },
+    payments: {
+      type: [PaymentSchema],
       required: true,
     },
   },
