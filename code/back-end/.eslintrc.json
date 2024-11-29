@@ -1,0 +1,26 @@
+{
+    "extends": [
+        "eslint:recommended",
+        "plugin:node/recommended",
+        "plugin:prettier/recommended"
+    ],
+    "plugins": [
+        "node",
+        "prettier"
+    ],
+    "rules": {
+        "no-console": "warn",
+        "quotes": ["error", "single"],
+        "semi": ["error", "never"],
+        "no-var": "error",
+        "prefer-const": "error",
+        "eqeqeq": ["error", "always"],
+        "no-unused-vars": [
+            "error", 
+            { 
+                "args": "none",
+                "ignoreRestSiblings": true 
+            }
+        ]
+    }
+}
