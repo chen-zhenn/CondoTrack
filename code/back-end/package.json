@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
@@ -16,5 +16,9 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^5.2.1",
     "prettier": "^3.4.1"
+  },
+  "dependencies": {
+    "express": "^4.21.1",
+    "nodemon": "^3.1.7"
   }
 }
