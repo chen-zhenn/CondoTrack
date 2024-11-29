@@ -1,0 +1,27 @@
+{
+  "name": "condoTrack",
+  "version": "1.0.0",
+  "description": "Sistema para controle de despesas e administração de condomínios.",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/chen-zhenn/CondoTrack.git"
+  },
+  "keywords": [
+    "condominium-management",
+    "expense-tracking",
+    "expense-tracking"
+  ],
+  "author": "Carlos Garcia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chen-zhenn/CondoTrack/issues"
+  },
+  "homepage": "https://github.com/chen-zhenn/CondoTrack#readme"
+}
