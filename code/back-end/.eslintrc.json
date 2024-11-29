@@ -21,6 +21,7 @@
                 "args": "none",
                 "ignoreRestSiblings": true 
             }
-        ]
+        ],
+        "no-process-exit": "off"
     }
 }
