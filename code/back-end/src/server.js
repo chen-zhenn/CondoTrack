@@ -1,6 +1,12 @@
 const dotenv = require('dotenv')
 dotenv.config({ path: '.env' })
-const app = require('./app')
+const { Mongodb: db } = require('./infra/database')
+const dbConn = process.env.DB_CONN
 const port = process.env.API_PORT || 8001
+const app = require('./app')
 
-app.listen(port, () => console.log(`Server Listen on port ${port}...`))
+db.connect(dbConn)
+  .then(() => {
+    app.listen(port, () => console.log(`Server Listen on port ${port}...`))
+  })
+  .catch((error) => process.exit(1))
