@@ -4,7 +4,9 @@ Esta documento descreve o setup do Docker para o ambiente de desenvolvimento do 
 
 ## :electric_plug: Instalação
 
-[aqui uma imagem do processo de instalação]
+<div align="center">
+    <img src="../guide-docker-install.gif">
+</div>
 
 ## Dependências
 
