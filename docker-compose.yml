@@ -1,0 +1,38 @@
+version: '3.10'
+
+services:
+  mongo:
+    image: mongo:6
+    container_name: condo-track-mongodb
+    networks:
+      - condo-track-network
+    volumes:
+      - condo-track-data:/data/db
+    restart: always
+
+  api:
+    build:
+      context: ./code/back-end
+      dockerfile: dockerfile
+    container_name: condo-track-api
+    networks:
+      - condo-track-network
+    ports:
+      - "8000:8000"
+    environment:
+      - DB_CONN=mongodb://condo-track-mongodb:27017/condo_track
+      - PORT=8000
+      - NODE_ENV=development
+    volumes:
+      - ./code/back-end:/condo-track-api
+    depends_on:
+      - mongo
+    restart: always
+
+networks:
+  condo-track-network:
+    driver: bridge
+
+volumes:
+  condo-track-data:
+    driver: local

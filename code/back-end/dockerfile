@@ -1,0 +1,9 @@
+FROM node:18
+ENV NODE_ENV=development
+ENV API_PORT=8000
+WORKDIR /condo-track-api
+COPY ./.env ./.env
+COPY . .
+EXPOSE ${API_PORT}
+RUN npm i
+CMD [ "npm", "run", "start:dev" ]

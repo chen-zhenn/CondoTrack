@@ -1,0 +1,10 @@
+node_modules/
+*.log
+*.env.sample
+*.git
+.git/
+.eslintrc.json
+.prettierrc
+*.tmp
+*.swp
+doc/
