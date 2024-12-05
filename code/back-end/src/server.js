@@ -1,5 +1,5 @@
 const dotenv = require('dotenv')
-dotenv.config({ path: '.env' })
+dotenv.config({ path: '../../.env' })
 const { Mongodb: db } = require('./infra/database')
 const dbDrive = process.env.DB_DRIVER
 const dbHost = process.env.DB_HOST
