@@ -1,9 +1,9 @@
 const mongoose = require('mongoose')
 
 class MongoDb {
-  static async connect(dbConn) {
+  static async connect(dbConn, dbName) {
     try {
-      await mongoose.connect(dbConn)
+      await mongoose.connect(dbConn, { dbName })
       console.log('Conexão com banco realizado com sucesso!')
       return mongoose.connection
     } catch (error) {
