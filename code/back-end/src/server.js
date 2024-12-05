@@ -1,6 +1,6 @@
 const dotenv = require('dotenv')
 dotenv.config({ path: '../../.env' })
-const { Mongodb: db } = require('./infra/database')
+const { Mongodb: db } = require('./infra/database")
 const dbDrive = process.env.DB_DRIVER
 const dbUser = process.env.DB_USER
 const dbPassword = process.env.DB_PASSWORD
