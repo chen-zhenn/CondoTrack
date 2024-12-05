@@ -15,21 +15,23 @@ services:
       context: ./code/back-end
       dockerfile: dockerfile
     container_name: condo-track-api
+    env_file:
+      - .env
     networks:
       - condo-track-network
     ports:
       - "8000:8000"
     environment:
-      - DB_DRIVER=mongodb
+      - DB_DRIVER=${DB_DRIVER}
       - DB_HOST=condo-track-mongodb
-      - DB_PORT=27017
-      - DB_NAME=condo_track
-      - API_PORT=8000
-      - NODE_ENV=development
+      - DB_PORT=${DB_PORT}
+      - DB_NAME=${DB_NAME}
+      - API_PORT=${API_PORT}
+      - NODE_ENV=${NODE_ENV}
     volumes:
-      - ./code/back-end:/condo-track-api
+      - ./code/back-end:/app
     depends_on:
-      - mongo
+      - condo-track-mongodb
     restart: always
 
 networks:
