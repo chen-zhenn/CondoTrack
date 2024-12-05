@@ -3,21 +3,20 @@ name: Back-End CI
 on:
   push:
     paths:
-      'code/back-end/**'
+      - 'code/back-end/**'
     branches: [ "develop" ]
   pull_request:
-      paths:
-      'code/back-end/**'
+    paths:
+      - 'code/back-end/**'
     branches: [ "develop" ]
 
 jobs:
   back-end-build:
-
     runs-on: ubuntu-latest
 
     strategy:
-    matrix:
-      node-version: [18.x, 20.x, 22.x]
+      matrix:
+        node-version: [18.x, 20.x, 22.x]
 
     defaults:
       run:
