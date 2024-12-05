@@ -20,8 +20,11 @@ services:
     ports:
       - "8000:8000"
     environment:
-      - DB_CONN=mongodb://condo-track-mongodb:27017/condo_track
-      - PORT=8000
+      - DB_DRIVER=mongodb
+      - DB_HOST=condo-track-mongodb
+      - DB_PORT=27017
+      - DB_NAME=condo_track
+      - API_PORT=8000
       - NODE_ENV=development
     volumes:
       - ./code/back-end:/condo-track-api
