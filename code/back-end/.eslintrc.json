@@ -6,7 +6,8 @@
     ],
     "plugins": [
         "node",
-        "prettier"
+        "prettier",
+        "jest"
     ],
     "rules": {
         "no-console": "warn",
