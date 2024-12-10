@@ -1,6 +1,6 @@
 {
   "*.js": [
-    "eslint src/",
-    "jest" 
+    "eslint --fix src/",
+    "jest --findRelatedTests" 
 ]
 }
