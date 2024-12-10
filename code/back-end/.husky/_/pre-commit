@@ -1,3 +1,4 @@
 #!/usr/bin/env sh
 . "$(dirname "$0")/h"
+cd code/back-end
 npx lint-staged
