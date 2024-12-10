@@ -1,6 +1,6 @@
 {
   "*.js": [
-    "eslint --fix src/",
-    "jest --findRelatedTests" 
-]
+    "eslint --fix src/"
+],
+"*.spec.js": ["jest --findRelatedTests" ]
 }
