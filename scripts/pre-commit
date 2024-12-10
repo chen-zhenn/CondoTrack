@@ -1,0 +1,12 @@
+#!/bin/sh
+
+cd code/back-end || exit 1
+
+npx lint-staged
+
+if [ $? -ne 0 ]; then
+  echo "Linting failed. Aborting commit."
+  exit 1
+fi
+
+echo "Linting succeeded. Commit allowed."
